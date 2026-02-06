@@ -207,7 +207,7 @@
     content:"";
     position:absolute;
     inset: 0;
-    background-image: url("/assets/img/PXL_20251108_185216411.jpg");
+    background-image: url("assets/img/PXL_20251108_185216411.jpg");
     background-size: cover;
     background-position: center;
     transform: scale(1.02);
