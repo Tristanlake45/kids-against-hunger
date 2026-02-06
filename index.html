@@ -1,0 +1,150 @@
+<!-- ==============================
+     UPDATED index.html
+     - Hero uses background image via CSS
+     - two-col sections now use colored panels
+============================== -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kids Against Hunger Sioux Falls</title>
+  <meta name="description" content="Kids Against Hunger Sioux Falls is a local 501(c)(3) volunteer-powered nonprofit packing nutritious meals for children and families facing hunger." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <div data-include="header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1 data-hero="2">Kids Against Hunger Sioux Falls</h1>
+
+          <p class="lead" data-hero="3">
+            Kids Against Hunger Sioux Falls is a local 501(c)(3) non-profit with a big heart for helping children & families in need.
+            We bring volunteers together to pack nutritious meals for children and families facing hunger—both locally and around the world.
+          </p>
+
+          <div class="hero-actions" data-hero="4">
+            <a class="btn btn-cta btn-volunteer"
+               href="https://www.signupgenius.com/go/10C094AA4AB2FA1F5C34-volunteer#/"
+               target="_blank" rel="noopener">Volunteer</a>
+
+            <a class="btn btn-cta btn-donate"
+               href="https://app.aplos.com/aws/give/KidsAgainstHungerSiouxFalls/donate"
+               target="_blank" rel="noopener">Donate</a>
+          </div>
+        </div>
+
+        <div data-reveal>
+          <h2 style="margin:0 0 10px; font-size:22px; letter-spacing:-0.01em;">Small actions. Real impact.</h2>
+          <p style="margin:0; color: rgba(17,17,17,.76);">
+            Every meal packed is a reminder that small actions, taken together, can make a powerful difference.
+            Through volunteer-powered food pack events and donations from volunteers, individuals, churches, civic clubs,
+            and local businesses, we deliver hope along with nourishment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-reveal>
+        <h2 class="section-title">Impact</h2>
+        <p class="section-sub">
+          As a 100% volunteer organization with no paid staff and no governmental support, we’re here to make an IMPACT on hunger.
+        </p>
+
+        <div class="impact" data-reveal>
+          <div class="impact-grid">
+            <div class="stat">
+              <p class="stat-number"><span data-count="3000">0</span>+</p>
+              <p class="stat-label">Volunteers in 2025</p>
+            </div>
+            <div class="stat">
+              <p class="stat-number"><span data-count="700000">0</span>+</p>
+              <p class="stat-label">Meals packed in 2025</p>
+            </div>
+            <div class="stat">
+              <p class="stat-number">100%</p>
+              <p class="stat-label">Volunteer organization</p>
+            </div>
+          </div>
+
+          <p class="small-note">
+            In 2025, over 3,000 volunteers came together to pack over 700,000 meals to help feed hungry people.
+          </p>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="two-col">
+          <div class="panel panel-blue" data-reveal>
+            <h2 class="section-title">Volunteer at a Food Pack Event</h2>
+            <p class="section-sub">Lend a hand, have fun, change lives, and help pack meals that truly matter.</p>
+            <ul class="bullets">
+              <li>Bring your group, church, or club</li>
+              <li>Hands-on, high-energy, meaningful work</li>
+              <li>Great for all ages (as allowed by events)</li>
+            </ul>
+            <div style="margin-top:16px;">
+              <a class="btn btn-cta btn-volunteer"
+                 href="https://www.signupgenius.com/go/10C094AA4AB2FA1F5C34-volunteer#/"
+                 target="_blank" rel="noopener">View volunteer dates</a>
+            </div>
+          </div>
+
+          <div class="panel panel-red" data-reveal>
+            <h2 class="section-title">Donate</h2>
+            <p class="section-sub">
+              Every financial gift helps fund meals, supplies, and distribution to those who need help.
+            </p>
+            <ul class="bullets">
+              <li>Funds ingredients and packing supplies</li>
+              <li>Supports distribution and logistics</li>
+              <li>Directly increases meals packed</li>
+            </ul>
+            <div style="margin-top:16px;">
+              <a class="btn btn-cta btn-donate"
+                 href="https://app.aplos.com/aws/give/KidsAgainstHungerSiouxFalls/donate"
+                 target="_blank" rel="noopener">Donate now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="panel panel-green" data-reveal>
+          <h2 class="section-title">Contact us for more information</h2>
+          <p class="section-sub">
+            Because we are powered 100% by volunteers, we strive to respond to messages & requests promptly…
+            but sometimes it might take a day or two for us to get back to you. Thanks for your understanding!
+          </p>
+
+          <ul class="bullets">
+            <li><strong>Phone:</strong> 605-610-9614</li>
+            <li><strong>Physical address (food packing events):</strong> 1701 N. Louise Drive, Sioux Falls, SD 57107</li>
+            <li><strong>Mailing address (donations & correspondence):</strong> PO Box 88616, Sioux Falls, SD 57109</li>
+          </ul>
+
+          <div style="margin-top:16px;">
+            <a class="btn btn-cta btn-green" href="./contact/">Contact page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Add dynamic header shrink (no need to change main.js)
+    const onScroll = () => {
+      document.body.classList.toggle("is-scrolled", window.scrollY > 10);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  </script>
+</body>
+</html>
