@@ -1,12 +1,24 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kids Against Hunger Sioux Falls</title>
-  <meta name="description" content="Kids Against Hunger Sioux Falls is a local 501(c)(3) volunteer-powered nonprofit packing nutritious meals for children and families facing hunger." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kids Against Hunger Sioux Falls</title>
+    <meta name="description" content="Kids Against Hunger Sioux Falls is a local 501(c)(3) volunteer-powered nonprofit packing nutritious meals for children and families facing hunger." />
+  
+    <!-- ✅ Dynamic base: /<repo>/ on github.io, / on local/custom domain -->
+    <script>
+      (function () {
+        var isGh = location.hostname.endsWith("github.io");
+        var firstSeg = location.pathname.split("/").filter(Boolean)[0] || "";
+        var base = isGh ? ("/" + firstSeg + "/") : "/";
+        document.write('<base href="' + base + '">');
+      })();
+    </script>
+  
+    <!-- ✅ Now this works everywhere -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
 <body>
   <div data-include="header"></div>
