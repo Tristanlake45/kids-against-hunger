@@ -1,18 +1,13 @@
-<!-- ==============================
-     UPDATED index.html
-     - Hero uses background image via CSS
-     - two-col sections now use colored panels
-============================== -->
 <!doctype html>
 <html lang="en">
 <head>
-  <base href="/Kids-Against-Hunger/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kids Against Hunger Sioux Falls</title>
   <meta name="description" content="Kids Against Hunger Sioux Falls is a local 501(c)(3) volunteer-powered nonprofit packing nutritious meals for children and families facing hunger." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
   <div data-include="header"></div>
 
@@ -23,7 +18,7 @@
           <h1 data-hero="2">Kids Against Hunger Sioux Falls</h1>
 
           <p class="lead" data-hero="3">
-            Kids Against Hunger Sioux Falls is a local 501(c)(3) non-profit with a big heart for helping children & families in need.
+            Kids Against Hunger Sioux Falls is a local 501(c)(3) non-profit with a big heart for helping children &amp; families in need.
             We bring volunteers together to pack nutritious meals for children and families facing hunger—both locally and around the world.
           </p>
 
@@ -56,7 +51,7 @@
           As a 100% volunteer organization with no paid staff and no governmental support, we’re here to make an IMPACT on hunger.
         </p>
 
-        <div class="impact" data-reveal>
+        <div class="impact" data-reveal id="impact-stats" role="button" tabindex="0" aria-label="Replay impact numbers">
           <div class="impact-grid">
             <div class="stat">
               <p class="stat-number"><span data-count="3000">0</span>+</p>
@@ -118,32 +113,36 @@
         <div class="panel panel-green" data-reveal>
           <h2 class="section-title">Contact us for more information</h2>
           <p class="section-sub">
-            Because we are powered 100% by volunteers, we strive to respond to messages & requests promptly…
+            Because we are powered 100% by volunteers, we strive to respond to messages &amp; requests promptly…
             but sometimes it might take a day or two for us to get back to you. Thanks for your understanding!
           </p>
 
           <ul class="bullets">
             <li><strong>Phone:</strong> 605-610-9614</li>
             <li><strong>Physical address (food packing events):</strong> 1701 N. Louise Drive, Sioux Falls, SD 57107</li>
-            <li><strong>Mailing address (donations & correspondence):</strong> PO Box 88616, Sioux Falls, SD 57109</li>
+            <li><strong>Mailing address (donations &amp; correspondence):</strong> PO Box 88616, Sioux Falls, SD 57109</li>
           </ul>
 
           <div style="margin-top:16px;">
-            <a class="btn btn-cta btn-green" href="/contact/">Contact page</a>
+            <a class="btn btn-cta btn-green" href="./contact/">Contact page</a>
           </div>
         </div>
+
+        <div class="rule"></div>
+
+
       </div>
     </section>
   </main>
 
   <div data-include="footer"></div>
 
+
+  <!-- Keep main.js last -->
   <script src="assets/js/main.js"></script>
+
   <script>
-    // Add dynamic header shrink (no need to change main.js)
-    const onScroll = () => {
-      document.body.classList.toggle("is-scrolled", window.scrollY > 10);
-    };
+    const onScroll = () => document.body.classList.toggle("is-scrolled", window.scrollY > 10);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   </script>
