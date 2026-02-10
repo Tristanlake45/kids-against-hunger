@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About · Kids Against Hunger Sioux Falls</title>
   <meta name="description" content="Learn about Kids Against Hunger Sioux Falls and how volunteers pack meals to fight hunger." />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>
+    (function () {
+      var isGh = location.hostname.endsWith("github.io");
+      var firstSeg = location.pathname.split("/").filter(Boolean)[0] || "";
+      var base = isGh ? ("/" + firstSeg + "/") : "/";
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+
+  <!-- ✅ Now this works everywhere -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <div data-include="header"></div>
@@ -77,6 +87,6 @@
   </main>
 
   <div data-include="footer"></div>
-  <script src="../assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

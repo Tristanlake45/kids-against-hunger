@@ -7,12 +7,15 @@ async function loadPartials() {
   const footerMount = document.querySelector("[data-include='footer']");
   const tasks = [];
 
-  if (headerMount) {
-    tasks.push(fetch("partials/header.html").then(r => r.text()).then(html => headerMount.innerHTML = html));
-  }
-  if (footerMount) {
-    tasks.push(fetch("partials/footer.html").then(r => r.text()).then(html => footerMount.innerHTML = html));
-  }
+  const fetchText = async (rel) => {
+    const url = new URL(rel, document.baseURI).toString();
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Fetch failed ${rel}: ${res.status}`);
+    return res.text();
+  };
+
+  if (headerMount) tasks.push(fetchText("partials/header.html").then(html => headerMount.innerHTML = html));
+  if (footerMount) tasks.push(fetchText("partials/footer.html").then(html => footerMount.innerHTML = html));
 
   await Promise.all(tasks);
 }
