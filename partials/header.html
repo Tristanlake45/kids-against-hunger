@@ -6,10 +6,20 @@
            alt="Kids Against Hunger logo" />
     </a>
 
-    <nav class="nav" aria-label="Primary">
+    <!-- hamburger (mobile) -->
+    <button class="nav-toggle" type="button"
+            aria-label="Open menu"
+            aria-controls="primary-nav"
+            aria-expanded="false">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
       <a class="nav-link" href="./">Home</a>
       <a class="nav-link" href="about/">About</a>
       <a class="nav-link" href="contact/">Contact</a>
     </nav>
   </div>
-</header>
+</header> 

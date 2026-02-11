@@ -164,6 +164,47 @@ function initGalleryLightbox() {
   });
 }
 
+function initMobileNav() {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("primary-nav");
+  if (!toggle || !nav) return;
+
+  const setOpen = (open) => {
+    document.body.classList.toggle("nav-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
+  // toggle button
+  toggle.addEventListener("click", () => {
+    const isOpen = document.body.classList.contains("nav-open");
+    setOpen(!isOpen);
+  });
+
+  // close when clicking a link
+  nav.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (a) setOpen(false);
+  });
+
+  // close on Escape
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+
+  // close on outside click
+  document.addEventListener("click", (e) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    const clickedInside = e.target.closest(".site-header");
+    if (!clickedInside) setOpen(false);
+  });
+
+  // if you rotate/resize to desktop, force close
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 640) setOpen(false);
+  });
+}
+
 function markLoadedForHero() {
   requestAnimationFrame(() => document.body.classList.add("is-loaded"));
 }
@@ -171,6 +212,7 @@ function markLoadedForHero() {
 (async function main() {
   await loadPartials();
   initScrollReveal();
+  initMobileNav();
   initCountUps();
   initReplayOnImpactClick();
   initGalleryLightbox();
