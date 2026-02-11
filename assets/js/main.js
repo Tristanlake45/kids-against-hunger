@@ -98,6 +98,22 @@ function initReplayOnImpactClick() {
   });
 }
 
+/* ------------------------------
+   Clear forms when returning from cache
+   (after thank-you redirect/back button)
+-------------------------------- */
+function initFormResetOnReturn() {
+  const forms = document.querySelectorAll("form");
+  if (!forms.length) return;
+
+  // fires when page is restored from back/forward cache
+  window.addEventListener("pageshow", (e) => {
+    if (e.persisted) {
+      forms.forEach(f => f.reset());
+    }
+  });
+}
+
 /* ✅ Lightbox (fixed) */
 function initGalleryLightbox() {
   const gallery = document.querySelector('[data-gallery="kah"]');
@@ -216,5 +232,6 @@ function markLoadedForHero() {
   initCountUps();
   initReplayOnImpactClick();
   initGalleryLightbox();
+  initFormResetOnReturn(); 
   markLoadedForHero();
 })();

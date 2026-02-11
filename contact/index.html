@@ -55,11 +55,64 @@
         <div class="panel panel-blue" data-reveal>
           <h2 class="section-title" style="margin-top:0;">Message (coming soon)</h2>
           <p class="section-sub" style="margin-bottom:0;">
-            When you’re ready, we’ll wire this to a static form service (or add mailto links).
+            <section class="section">
+              <div class="container">
+                <div class="panel panel-blue" data-reveal>
+                  <h2 class="section-title" style="margin-top:0;">Send a message</h2>
+                  <p class="section-sub">
+                    We’re volunteer-powered, so replies may take a day or two. Thanks!
+                  </p>
+            
+                  <form
+                    class="contact-form"
+                    action="https://formspree.io/f/mgoloyzw"
+                    method="POST"
+                  >
+                    <!-- ✅ Formspree: subject line in your email inbox -->
+                    <input type="hidden" name="_subject" value="KAH Website Contact Form" />
+            
+                    <!-- ✅ Redirect after success (make sure this page exists) -->
+                    <input type="hidden" name="_redirect" value="thank-you/" />
+            
+                    <!-- ✅ Honeypot (spam trap). Keep hidden via CSS below -->
+                    <div class="hp-field" aria-hidden="true">
+                      <label for="website">Website</label>
+                      <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                    </div>
+            
+                    <div class="form-grid">
+                      <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required maxlength="80" />
+                      </div>
+            
+                      <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" />
+                      </div>
+                    </div>
+            
+                    <div class="field">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="6" required maxlength="4000"></textarea>
+                    </div>
+            
+                    <div class="form-actions">
+                      <button class="btn btn-cta btn-green" type="submit">Send message</button>
+                    </div>
+            
+                    <p class="small-note" style="margin-top:12px;">
+                      By sending, you agree we may respond to your email address.
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </section>
           </p>
         </div>
       </div>
     </section>
+    
   </main>
 
   <div data-include="footer"></div>

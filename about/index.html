@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About · Kids Against Hunger Sioux Falls</title>
   <meta name="description" content="Learn about Kids Against Hunger Sioux Falls and how volunteers pack meals to fight hunger." />
+
   <script>
     (function () {
       var isGh = location.hostname.endsWith("github.io");
@@ -14,42 +15,46 @@
     })();
   </script>
 
-  <!-- ✅ Now this works everywhere -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
   <div data-include="header"></div>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="kicker" data-hero="1">
-            <span class="kicker-dot" aria-hidden="true"></span>
-            About us
-          </div>
-
-          <h1 data-hero="2">A big heart for helping children & families in need</h1>
+          <h1 data-hero="2">About Kids Against Hunger Sioux Falls</h1>
 
           <p class="lead" data-hero="3">
             Kids Against Hunger Sioux Falls is a local 501(c)(3) nonprofit that brings volunteers together
             to pack nutritious meals for those facing hunger—both locally and around the world.
           </p>
 
+          <div class="hero-actions" data-hero="4">
+            <a class="btn btn-cta btn-volunteer"
+               href="https://www.signupgenius.com/go/10C094AA4AB2FA1F5C34-volunteer#/"
+               target="_blank" rel="noopener">Volunteer</a>
+
+            <a class="btn btn-cta btn-donate"
+               href="https://app.aplos.com/aws/give/KidsAgainstHungerSiouxFalls/donate"
+               target="_blank" rel="noopener">Donate</a>
+          </div>
         </div>
 
-        <aside class="hero-card" data-reveal>
-          <div class="hero-card-inner">
-            <h2 class="hero-card-title">Volunteer-powered</h2>
-            <p class="hero-card-text">
-              As a 100% volunteer organization with no paid staff and no governmental support, we focus on one thing:
-              making an impact on hunger through meal packing events and community generosity.
-            </p>
-          </div>
-        </aside>
+        <div class="panel panel-blue" data-reveal>
+          <h2 class="section-title" style="margin-top:0;">Volunteer-powered</h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            We are a 100% volunteer organization with no paid staff and no governmental support.
+            Our focus is simple: make an impact on hunger through meal packing events and community generosity.
+          </p>
+        </div>
       </div>
     </section>
 
+    <!-- CONTENT -->
     <section class="section">
       <div class="container">
         <h2 class="section-title" data-reveal>What we do</h2>
@@ -57,31 +62,61 @@
           We host volunteer food pack events and use donations to fund ingredients, supplies, and distribution.
         </p>
 
-        <div class="cards">
-          <div class="card" data-reveal>
-            <span class="card-badge badge-blue">Events</span>
-            <div class="card-title">Food pack events</div>
-            <p class="card-text">
+        <div class="two-col">
+          <div class="panel panel-green" data-reveal>
+            <h2 class="section-title">Food pack events</h2>
+            <p class="section-sub">
               Volunteers work side-by-side to pack meals that help feed children and families.
+              It’s hands-on, high-energy, and meaningful.
             </p>
+            <ul class="bullets">
+              <li>Great for groups, churches, clubs, and businesses</li>
+              <li>Events are designed to be simple and fun to join</li>
+              <li>Every shift helps move meals out the door</li>
+            </ul>
           </div>
 
-          <div class="card" data-reveal>
-            <span class="card-badge badge-green">Donations</span>
-            <div class="card-title">Community support</div>
-            <p class="card-text">
-              Donations from individuals, churches, civic clubs, and businesses help make every event possible.
+          <div class="panel panel-red" data-reveal>
+            <h2 class="section-title">Funded by community support</h2>
+            <p class="section-sub">
+              Donations from individuals, churches, civic clubs, and businesses help make every event possible
+              and keep meals moving to where they’re needed.
             </p>
-          </div>
-
-          <div class="card" data-reveal>
-            <span class="card-badge badge-red">Distribution</span>
-            <div class="card-title">Hope delivered</div>
-            <p class="card-text">
-              Meals are delivered to people in need locally and around the world.
-            </p>
+            <ul class="bullets">
+              <li>Funds ingredients and packing supplies</li>
+              <li>Supports logistics and distribution</li>
+              <li>Directly increases meals packed</li>
+            </ul>
           </div>
         </div>
+
+        <div class="rule"></div>
+
+        <div class="panel panel-blue" data-reveal>
+          <h2 class="section-title">Hope delivered</h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            Packed meals are delivered to people in need locally and around the world—because hunger doesn’t stop at borders.
+            Your time and support help deliver nourishment and hope.
+          </p>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="panel panel-green" data-reveal>
+          <h2 class="section-title">Want to get involved?</h2>
+          <p class="section-sub">
+            Whether you volunteer, donate, or bring a group—there’s a place for you here.
+          </p>
+
+          <div class="hero-actions" style="margin-top:0;">
+            <a class="btn btn-cta btn-volunteer"
+               href="https://www.signupgenius.com/go/10C094AA4AB2FA1F5C34-volunteer#/"
+               target="_blank" rel="noopener">View volunteer dates</a>
+
+            <a class="btn btn-cta btn-green" href="contact/">Contact us</a>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
