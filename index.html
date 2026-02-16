@@ -3,10 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
     <title>Kids Against Hunger Sioux Falls</title>
     <meta name="description" content="Kids Against Hunger Sioux Falls is a local 501(c)(3) volunteer-powered nonprofit packing nutritious meals for children and families facing hunger." />
   
-    <!-- ✅ Dynamic base: /<repo>/ on github.io, / on local/custom domain -->
+    <link rel="canonical" href="https://kidsagainsthungersiouxfalls.org/" />
+  
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kids Against Hunger Sioux Falls" />
+    <meta property="og:description" content="Volunteer-powered nonprofit packing meals for children and families in need." />
+    <meta property="og:image" content="https://kidsagainsthungersiouxfalls.org/assets/img/kah_logo_vertical_no_tag_no_background.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kidsagainsthungersiouxfalls.org/" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kids Against Hunger Sioux Falls" />
+    <meta name="twitter:description" content="Volunteer-powered nonprofit packing meals for children and families in need." />
+    <meta name="twitter:image" content="https://kidsagainsthungersiouxfalls.org/assets/img/kah_logo_vertical_no_tag_no_background.png" />
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/kah_logo_vertical_no_tag_no_background.png" />
+  
+    <!-- Dynamic base for GitHub Pages project root -->
     <script>
       (function () {
         var isGh = location.hostname.endsWith("github.io");
@@ -15,12 +34,9 @@
         document.write('<base href="' + base + '">');
       })();
     </script>
-
-    <link rel="icon" type="image/png" href="assets/img/kah_logo_vertical_no_tag_no_background.png" />
-    <!-- ✅ Now this works everywhere -->
+  
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-
 <body>
   <div data-include="header"></div>
 
@@ -160,5 +176,24 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   </script>
+  <script>
+    // Loader: hide after the page has rendered
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("pageLoader");
+      if (!loader) return;
+      // small delay so the pop is visible
+      setTimeout(() => loader.classList.add("is-hidden"), 450);
+    });
+  </script>
 </body>
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <img
+    class="page-loader__logo"
+    src="assets/img/KAH logo portrait 2021.jpg"
+    alt=""
+    width="140"
+    height="140"
+    decoding="async"
+  />
+</div>
 </html>

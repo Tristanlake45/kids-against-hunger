@@ -814,3 +814,39 @@ body.is-loaded .hero [data-hero="4"]{ transition-delay: 320ms; }
 @media (max-width: 640px){
   .map-embed iframe{ height: 260px; }
 }
+
+/* ==============================
+   Page Loader (home only)
+============================== */
+.page-loader{
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 380ms var(--ease), visibility 380ms var(--ease);
+}
+
+.page-loader__logo{
+  width: 120px;
+  height: auto;
+  transform: scale(2);
+  opacity: 0;
+  animation: loaderPop 520ms var(--ease) forwards;
+}
+
+@keyframes loaderPop{
+  0%   { opacity: 0; transform: scale(1.8); }
+  70%  { opacity: 1; transform: scale(2.05); }
+  100% { opacity: 1; transform: scale(2); }
+}
+
+/* hide */
+.page-loader.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
