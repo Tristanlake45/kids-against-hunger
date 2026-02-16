@@ -749,3 +749,68 @@ body.is-loaded .hero [data-hero="4"]{ transition-delay: 320ms; }
   .stat{ padding: 14px; }
   .stat-number{ font-size: 28px; }
 }
+
+/* ==============================
+   Contact page helpers
+============================== */
+
+.contact-panel .section-sub a{
+  font-weight: 900;
+}
+
+.contact-block{
+  margin-top: 10px;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-row{
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.86);
+}
+
+.contact-label{
+  font-weight: 1000;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.contact-value{
+  color: rgba(17,17,17,.78);
+  line-height: 1.5;
+}
+
+.contact-link{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(17,17,17,.20);
+}
+.contact-link:hover{
+  border-bottom-color: rgba(17,17,17,.55);
+}
+
+/* ==============================
+   Map embed (sleek B/W look)
+============================== */
+
+.map-embed{
+  margin-top: 14px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  background: rgba(255,255,255,.92);
+}
+
+.map-embed iframe{
+  display:block;
+  width: 100%;
+  height: 320px;
+  filter: grayscale(100%) contrast(1.05) brightness(.98);
+}
+
+/* Responsive map height */
+@media (max-width: 640px){
+  .map-embed iframe{ height: 260px; }
+}
